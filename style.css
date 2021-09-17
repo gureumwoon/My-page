@@ -1,8 +1,6 @@
 @font-face {
     font-family: 'Clouds of Despair LSF';
     src: url("CloudsofDespairLSF.woff");
-    font-family: 'Bubble Bobble';
-    src: url("BubbleBobble.woff");
     font-family: 'BUBBLE BOBA';
     src: url("BUBBLE-BOBA.woff");
 
@@ -22,7 +20,7 @@ html{
     scroll-behavior: smooth;
 }
 #welcome{
-    background-image: url("cloud-photo.jpg");
+    background-image: url("./image/cloud-photo.jpg");
     width: 100vw;
     height: 100vh;
     margin: 0 auto;
@@ -40,12 +38,15 @@ body{
     margin:0;
     white-space: nowrap;
     overflow: hidden;
-    display:inline-flex;
-    padding-left:270px;
-    padding-top: 200px;
+    display:inline;
+    position: relative;
+    padding-left: 350px;
+    top: 170px;
 }
 
 .blink{
+    position: relative;
+    top: 170px;
     font-family: 'BUBBLE BOBA';
     font-size: 7em;
     color: white;
@@ -141,6 +142,12 @@ footer{
     color:white;
     font-size: 12px;
     padding: 7px;
+    width: 100vw;
+    height: 56.25%;
+    max-height: 150vh;
+    max-width: 189.78vw;
+    white-space : nowrap;
+    overflow : hidden;
 }
 .title{
 display:inline-block;
@@ -153,7 +160,8 @@ height:143px;
     font-size: 90px;
     padding-top: 30px;
     position:relative;
-    top: 25px;
+    right: 850px;
+    top: 5px;
     color:rgb(220, 157, 20);
     white-space : nowrap;
     overflow : hidden;
@@ -162,8 +170,8 @@ height:143px;
     display:inline-flex;
     justify-content:space-evenly;
     flex-direction:column;
-    padding-top: 5px;
-    top:15px;
+    position: relative;
+    bottom: 25px;
     padding-left: 100px;
     height:600px;
     width:60px;
@@ -171,18 +179,18 @@ height:143px;
 }
 .likebox{
     padding-top:20px;
-    height: 70vh;
-    display:inline-flex;
+    display:flex;
+    height:70vh;
     flex-direction: row;
-    justify-content: flex-end;
-    width: 1700px;
+    justify-content: center;
+    width: 100vw;
     top:20px;  
 }
 .likevideo{
     position:relative;
     top: 50px;
     bottom:75px;
-    left: 170px;
+    left: 190px;
 }
 .liketext{
     position:relative;
@@ -198,7 +206,7 @@ height:143px;
 .arrow{
     position:relative;
     top: 25px;
-    left: 175px;
+    left: 200px;
     height:100px;
     width:100px;
 }
@@ -222,14 +230,18 @@ height:143px;
     width: 100vw;
     height: 56.25%;
     max-height: 100vh;
-    max-width: 189.78vh;
+    max-width: 189.78vw;
+    white-space : nowrap;
+    overflow : hidden;
     border-bottom: 5px dotted cornflowerblue;
 }
 #third-page{
     width: 100vw;
     height: 56.25%;
-    max-height: 100vh;
-    max-width: 189.78vh;
+    max-height: 150vh;
+    max-width: 189.78vw;
+    white-space : nowrap;
+    overflow : hidden;
 }
 .singer{
     position:relative;
@@ -423,7 +435,7 @@ height:143px;
     display:flex;
     justify-content:space-evenly;
     flex-direction:column;
-    padding-top: 250px;
+    padding-top: 190px;
     padding-left: 130px;
     height:600px;
     width:60px;
@@ -440,8 +452,32 @@ height:143px;
     float:left;
 }
 
-.title_text_food{
+.title-food{
+    font-family: 'Poor Story', cursive;
+    font-size: 90px;
+    padding-top: 30px;
     position:relative;
-    top: 10px;
-    right:110px;
+    left: 670px;
+    top: 5px;
+    color:rgb(220, 157, 20);
+    white-space : nowrap;
+    overflow : hidden;
+}
+
+.title-movie{
+    font-family: 'Poor Story', cursive;
+    font-size: 90px;
+    position:relative;
+    left: 670px;
+    bottom: 15px;
+    color:rgb(220, 157, 20);
+}
+
+.fix{
+    width: 100vw;
+    height: 56.25%;
+    max-height: 100vh;
+    max-width: 189.78vh;
+    white-space : nowrap;
+    overflow : hidden;
 }

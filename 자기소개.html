@@ -24,30 +24,34 @@
             <span class="typed"></span><span class="blink">|</span>
         </a>
     </section>
-
+    
+<!--  타이핑효과 -->
     <script>
-        var options = {
-            strings: ['Hello! Im, Chaewoon'],
-            typeSpeed: 150,
-            backSpeed: 150,
-            fadeOut: false,
-            smartBackspace: true,
-            loop: true,
-            cursorChar: '',
-        };
-        var typed = new Typed('.typed', options);
+        const content = "Hi! Im, Chaewoon";
+        const text = document.querySelector(".typed");
+        let i = 0;
+
+        function typing() {
+            let txt = content[i++];
+            text.innerHTML += txt === "\n" ? "<br/>" : txt;
+            if (i > content.length) {
+                text.textContent = "";
+                i = 0;
+            }
+        }
+        setInterval(typing, 230)
     </script>
 
     <section id="second-page">
         <div class="main-nav">
             <a href="#welcome">
-                <img src="rainbow.png" class="rainbow" /> <span class="Main-text">Home</span>
+                <img src="./image/rainbow.png" class="rainbow" /> <span class="Main-text">Home</span>
             </a>
             <a href="#second-page">
-                <img src="sunny.png" class="sunny" /> <span class="Myself-text">About Me</span>
+                <img src="./image/sunny.png" class="sunny" /> <span class="Myself-text">About Me</span>
             </a>
             <a href="#third-page">
-                <img src="crescent-moon.png" class="moon" /><span class="Whatilike-text">What I Like</span>
+                <img src="./image/crescent-moon.png" class="moon" /><span class="Whatilike-text">What I Like</span>
             </a>
         </div>
 
@@ -55,7 +59,7 @@
             <h1 class=title-text>About Me</h1>
         </div>
         <div class="profile">
-            <img src="프로필사진(강릉).jpg" class="profile-image" />
+            <img src="./image/프로필사진(강릉).jpg" class="profile-image" />
             <div class="profile-text">
                 <p>안녕하세요 저는 <span class="highlighttext">김채운</span> 입니다.</p>
                 <p>나이는 <span class="highlighttext">27살</span> 이구요,</p>
@@ -74,13 +78,13 @@
     <section id="third-page">
         <div class="main-nav">
             <a href="#welcome">
-                <img src="rainbow.png" class="rainbow" /> <span class="Main-text">Home</span>
+                <img src="./image/rainbow.png" class="rainbow" /> <span class="Main-text">Home</span>
             </a>
             <a href="#second-page">
-                <img src="sunny.png" class="sunny" /> <span class="Myself-text">About Me</span>
+                <img src="./image/sunny.png" class="sunny" /> <span class="Myself-text">About Me</span>
             </a>
             <a href="#third-page">
-                <img src="crescent-moon.png" class="moon" /><span class="Whatilike-text"> What I Like</span>
+                <img src="./image/crescent-moon.png" class="moon" /><span class="Whatilike-text"> What I Like</span>
             </a>
         </div>
         <div class="title">
@@ -88,12 +92,19 @@
         </div>
 
         <div class="likebox">
+            <aside class="sidebar">
+                <a href="자기소개.html #third-page "><i class="em em-musical_note" aria-role="presentation"
+                        aria-label="MUSICAL NOTE"></i></a>
+                <a href="movie.html"><i class="em em-movie_camera" aria-role="presentation"
+                        aria-label="MOVIE CAMERA"></i></a>
+                <a href="food.html"><i class="em em-hamburger" aria-role="presentation" aria-label="HAMBURGER"></i></a>
+            </aside>
             <div class="likevideo">
                 <iframe width="660" height="415" src="https://www.youtube.com/embed/y2nueZoHbsw"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
-            <img src="skybluearrow.png" alt="" class="arrow" />
+            <img src="./image/skybluearrow.png" alt="" class="arrow" />
             <div class="singer">Official髭男dism</div>
             <div class="liketext">
                 <p>저는 평소에 음악없인 못 산다고 말 할 정도로,</p>
@@ -104,93 +115,7 @@
                 <p>영상에 나오는 노래를 무한 반복으로 듣는 중입니다</p>
             </div>
         </div>
-        <aside class="sidebar">
-            <a href="자기소개.html #third-page "><i class="em em-musical_note" aria-role="presentation"
-                    aria-label="MUSICAL NOTE"></i></a>
-            <a href="movie.html"><i class="em em-movie_camera" aria-role="presentation"
-                    aria-label="MOVIE CAMERA"></i></a>
-            <a href="food.html"><i class="em em-hamburger" aria-role="presentation" aria-label="HAMBURGER"></i></a>
-        </aside>
 
-        <!--
-        <section id="section3-1">
-            <div class="title">
-                <h1 class=title-text>Movie</h1>
-            </div>
-
-            <div class="movie1">
-                <img src="harry-potter700x380.jpg" alt="" class="harrypotter" />
-                <img src="skybluearrow.png" alt="" class="skybluearrow2">
-                <div class="harrypotter-text">
-                    <p>해리포터는,</p>
-                    <p>변하지 않을 제 인생영화 입니다!</p>
-                    <p>10년동안 같이 성장한 영화라, 추억도 많아서</p>
-                    <p>아직도 특별한 날에는 해리포터를 정주행 하곤 합니다</p>
-                </div>
-            </div>
-
-            <div class="movie2">
-                <div class="avengers-text">
-                    <p>사진은 어벤저스로 해놨지만,</p>
-                    <p>사실 저는 마블에서 나오는 영화를 다 좋아해서</p>
-                    <p>개봉할 때마다 보는것은 물론이고 해리포터와 마찬가지로</p>
-                    <p>주기적으로 정주행 하는 영화중 하나 입니다!</p>
-                </div>
-                <img src="skybluearrowleft.png" alt="" class="skybluearrowleft">
-                <img src="avengers.jpg" alt="" class="avengers" />
-            </div>
-
-        </section>
-    -->
-        <!--
-        <section id="section3-2">
-            <div class="title">
-                <h1 class=title-text>Food</h1>
-            </div>
-            <div class="child-page-listing">
-
-                <div class="grid-container">
-
-                    <article class="food-listing">
-                        <a class="food-title" href="#">칼국수</a>
-                        <div class="food-image">
-                            <a href="#">
-                                <img class="eat" src="만두전골.jpg" alt="칼국수">
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="food-listing">
-                        <a class="food-title" href="#">피자</a>
-                        <div class="food-image">
-                            <a href="#">
-                                <img class="eat" width="300" height="169" src="피자.jpg" alt="피자">
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="food-listing">
-                        <a class="food-title" href="#">햄버거</a>
-                        <div class="food-image">
-                            <a href="#">
-                                <img class="eat" width="300" height="169" src="햄버거.jpg" alt="햄버거">
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="food-listing">
-                        <a class="food-title" href="#">떡볶이</a>
-                        <div class="food-image">
-                            <a href="#">
-                                <img class="eat" width="300" height="169" src="떡볶이.jpg" alt="떡볶이">
-                            </a>
-                        </div>
-                    </article>
-        </section>
-        </div>
-        </div>
-    </section>
--->
         <footer>
             <ul>
                 <div>
@@ -202,12 +127,15 @@
                     </a>
                 </div>
                 <div class="social">
-                    <a class="github" href="https://github.com/gureumwoon"><i
+                    <a class="github" target="_blank" href="https://github.com/gureumwoon"><i
                             class="fab fa-github-square fa-2x"></i></a>
-                    <a class="velog" href="https://velog.io/@codns1223"><i class="fas fa-sticky-note fa-2x"></i></a>
+                    <a class="velog" target="_blank" href="https://velog.io/@codns1223"><i
+                            class="fas fa-sticky-note fa-2x"></i></a>
                 </div>
             </ul>
         </footer>
+    </section>
+
 </body>
 
 </html>
